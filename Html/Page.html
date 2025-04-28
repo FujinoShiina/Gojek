@@ -11,7 +11,16 @@
     width: 100%;
     display: flex;
     margin-top: 5vh;
-    position: absolute;
+    position: sticky;
+    top: 0px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .navbar.sticky {
+    background-color: white;
+  }
+
+  .navbar.sticky a {
+    color: black;
   }
   .navbar-logo{
     width: 40%;
@@ -36,17 +45,24 @@
   .navbar a:active {
     text-decoration: underline;
   }
+  .video-promotional {
+    width: 100%;
+    height: auto;
+    top: 0;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+  }
   .Carousel {
     width: 75vw;
     height: 50vh;
-
     background-color: green;
     margin-left: 10vw;
     border-radius: 25px;
   }
   .Carousel-Transport {
     width: 100%;
-    height: 10%;
+    height: 10vh;
     border-radius: 25px;
     display: flex;
     color: white;
@@ -56,35 +72,89 @@
     margin-left: 5vw;
     margin-top: 10vh;
   }
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service-item {
+    width: calc(33% - 20px); /* Roughly three items per row with some spacing */
+    padding: 15px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  .service-item img {
+    width: 5vw;
+    height: auto;
+    max-width: 50px; /* Set a maximum width if needed */
+    display: block; /* Prevent extra space below inline images */
+    margin: 0 auto 10px auto; /* Center image and add space below */
+  }
+
+  .service-item div {
+    font-size: 20px;
+    color: white;
+  }
+
 </style>
   <body style="background-color: black; margin:0">
-        <navbar class="navbar">
-          <div class ="navbar-logo">
-            <a href="#"><img src="../img/GojekLogo-white.svg" alt="Gojek Logo"></a>
-          </div>
-          <div class="navbar-links">
-            <a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Contact Us</a>
-            <a href="#">join us</a>
-          </div>
-        </navbar>
+    <navbar>
+      <div class ="navbar-logo">
+        <a href="#"><img src="../img/GojekLogo-white.svg" alt="Gojek Logo"></a>
+      </div>
+      <div class="navbar-links">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Contact Us</a>
+        <a href="#">join us</a>
+      </div>
+    </navbar>
         
-        <video width="100%" height="80%" autoplay muted loop>
-          <source src="../img/cartethyia.mp4" type="video/mp4">
-        </video>
+    <div class="container pt-md-4 pb-md-5">
+      <video class="video-promotional" autoplay muted loop>
+        <source src="../img/cartethyia.mp4" type="video/mp4">
+      </video>
+      <div style="color:white;font-size: 30px; margin: 10%; height: 100vh;">
+        <span>3 Countries. <br> 20+ product. <br> 1 leading. <br> on-demand platform.</span>
+      </div>
+    </div>
 
-        <div class="container pt-md-4 pb-md-5" style="color:white;font-size: 30px; margin: 10%;">
-          We have 20+ products serving millions of customers across
-          <span style="color: green;">Transport & Logistics</span>, 
-          Food & Shopping, Payments, Daily needs, Business, News & Entertainment.
-        </div>
+    <div class="container pt-md-4 pb-md-5" style="color:white;font-size: 30px; margin: 10% 10% 5% 5%;">
+      We have 20+ products serving millions of customers across
+      <span style="color: green;">Transport & Logistics</span>, 
+      Food & Shopping, Payments, Daily needs, Business, News & Entertainment.
+    </div>
 
-        <div class="Carousel">
-          <div class="Carousel-Transport">
-              <p>Transport & Logistics</p> 
-          </div>  
+    <div class="Carousel">
+      <div class="Carousel-Transport">
+          <p>Transport & Logistics</p> 
+      </div>
+      <div class="services-grid">
+        <div class="service-item">
+          <img src="../img/GoRide.svg" alt="GoRide">
+          <div>Your two-wheeler taxi, the indigenous Ojek.</div>
         </div>
-        
+        <div class="service-item">
+          <img src="../img/GoCar.svg" alt="GoCar">
+          <div>Comfort on wheels. Sit back. Sleep. Snore.</div>
+        </div>
+        <div class="service-item">
+          <img src="../img/GoSend.svg" alt="GoSend">
+          <div>Send or get packages delivered within hours</div>
+        </div>
+        <div class="service-item">
+          <img src="../img/Gobox.svg" alt="Gobox">
+          <div>Moving out? We’ll do the weights.</div>
+        </div>
+        <div class="service-item">
+          <img src="../img/gobluebird.svg" alt="Gobluebird">
+          <div>Ride exclusive with Bluebird.</div>
+        </div>
+        <div class="service-item">
+          <img src="../img/gotransit.svg" alt="gotransit">
+          <div>Your commute assistant, with or without Gojek.</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
