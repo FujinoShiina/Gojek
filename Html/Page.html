@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gojek</title>
+</head>
+<style>
+  navbar {
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+    margin-top: 5vh;
+    position: absolute;
+  }
+  .navbar-logo{
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .navbar-links{
+    width: 60%;
+    justify-content: left ;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-links a {
+    padding-left: 5vw;
+  }
+  navbar a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .navbar a:active {
+    text-decoration: underline;
+  }
+  .Carousel {
+    width: 75vw;
+    height: 50vh;
+
+    background-color: green;
+    margin-left: 10vw;
+    border-radius: 25px;
+  }
+  .Carousel-Transport {
+    width: 100%;
+    height: 10%;
+    border-radius: 25px;
+    display: flex;
+    color: white;
+    font-size: 25px;
+  }
+  .Carousel-Transport p {
+    margin-left: 5vw;
+    margin-top: 10vh;
+  }
+</style>
+  <body style="background-color: black; margin:0">
+        <navbar class="navbar">
+          <div class ="navbar-logo">
+            <a href="#"><img src="../img/GojekLogo-white.svg" alt="Gojek Logo"></a>
+          </div>
+          <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+            <a href="#">join us</a>
+          </div>
+        </navbar>
+        
+        <video width="100%" height="80%" autoplay muted loop>
+          <source src="../img/cartethyia.mp4" type="video/mp4">
+        </video>
+
+        <div class="container pt-md-4 pb-md-5" style="color:white;font-size: 30px; margin: 10%;">
+          We have 20+ products serving millions of customers across
+          <span style="color: green;">Transport & Logistics</span>, 
+          Food & Shopping, Payments, Daily needs, Business, News & Entertainment.
+        </div>
+
+        <div class="Carousel">
+          <div class="Carousel-Transport">
+              <p>Transport & Logistics</p> 
+          </div>  
+        </div>
+        
+  </body>
+</html>
